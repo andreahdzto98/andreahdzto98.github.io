@@ -6,8 +6,8 @@
 
 body {
 width: 100vw;
-	overflow-x: hidden;
-  background-color:  #F2F2F2;
+overflow-x: hidden;
+background-color:  #F2F2F2;
 }
 
 a:hover{
@@ -62,8 +62,14 @@ color:#0F0F0F;
 .infografia h3{
 	font-size: 5rem;
 }
+.infografia p {
+	font-size: 1.3rem;
 
+}
 
+.infografia pn{
+  text-align: center;
+}
 
 /* ANIMACION*/
 /* Top left text */
@@ -92,6 +98,10 @@ color:#0F0F0F;
 
   opacity: 1;
 }
+
+.resume-movil{
+		display: none;
+	}
 
 @media only screen and (max-width: 768px) {
 	
@@ -138,6 +148,18 @@ letter-spacing: .3rem;
 	font-size: 2.5rem;
 }
 
+		.infografia h2{
+	font-size: 2rem;
+}
+			.infografia pn{
+	font-size: 1rem ;
+  text-align: center;
+}
+	
+	.infografia p {
+	font-size: rem;
+
+}
 	
 	p{
 font-family: 'Mulish', sans-serif;
@@ -178,7 +200,13 @@ height: auto;
 		width: 115%;
 	}
 
-	
+	.resume-movil{
+		display: block;
+		font-size: 0.9rem;
+	    text-align: center;
+	   margin-top: 8px;
+	margin-bottom: 0px;
+	}
 }
 
 
@@ -193,6 +221,9 @@ height: auto;
 		height: 180px;
 	}
 	
+	.video-section{
+		height: auto;
+	}
 	
 }
 
@@ -279,7 +310,7 @@ background-color: black;
 		margin-top: 3rem;
 		margin-bottom: 3rem;
 	}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
 	
 .nav-link{
 
@@ -301,9 +332,24 @@ margin: 0.5rem;
 		margin-right: auto;
 		margin-left: auto;
 	}
+	
+	.bannerimg{
+		width: 60%;
+	}
+
 }
 
+@media only screen and (max-width: 572px) {
 
+	
+	.video-section{
+		height: auto;
+	
+	}
+	.bannerimg{
+		width: 40%;
+	}
+}
 
 /*Footer*/
 footer{
@@ -627,6 +673,9 @@ color: #81CF93;
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
 }
+.btn:hover a {
+	color:#F2A35E;
+}
 
 @media only screen and (max-width: 768px) {
 	
@@ -642,7 +691,7 @@ color: #81CF93;
 }
 	.portfolio-modal .modal-content a {
  font-family: 'Mulish', sans-serif;
-font-size: 1.2rem ;
+font-size: 1.1rem ;
 font-weight: 400;
 
 }

@@ -145,13 +145,16 @@
       <div class="col-xl-3 col-md-4 col-sm-2 p-4">
 		  <div class="row justify-content-center">
         <img src="img/ANDREAHDZTO.png" alt="me" width="85%" height="auto" class="mx-auto d-block" >
+			  
 			  </div>
+		 <p class="resume-movil">Descarga mi Curriculum</p>
 		  <div class=" anima5 row d-flex justify-content-center p-2">
 			  <a href="downloads/resume.pdf" download="resume" target="_blank">
-		   <div id="animacion5"  style="height: 35%; width: auto" ></div>
+		   <div id="animacion5"  style="height: 35%; width: auto"  data-toggle="tooltip" data-placement="bottom" title="Descarga mi Curriculum" ></div>
 				  </a>
-			   
+			 
 		</div>
+		 
 	    </div>
       <div class=" col-xl-4 col-md-5 col-sm-2 px-4 m-4 ">
       <div class="mb-4"><h2 >¡Hola!</h2></div>
@@ -169,18 +172,18 @@
       <div class="col-md-10 col-sm-6 col-xs-3 py-4 m-4 ">
 		  <div class="d-flex justify-content-center ">
          <a href="mailto: andreahdzto98@gmail.com" class="social-icons" target="_blank">
-          <i class="far fa-envelope fa-lg ml-3 mr-3 fa-2x" style="color:#F29F05"></i>
+          <i class="far fa-envelope fa-lg ml-3 mr-3 fa-2x" style="color:#F2A35E"></i>
 		</a>
           <a href="https://www.linkedin.com/in/andrea-hern%C3%A1ndez-torres-80195b15b/" class="social-icons" target="_blank">
-            <i class="fab fa-linkedin-in fa-lg  ml-3 mr-3 fa-2x" style="color:#F29F05"> </i>
+            <i class="fab fa-linkedin-in fa-lg  ml-3 mr-3 fa-2x" style="color:#F2A35E"> </i>
           </a>
          
           <a href="https://www.instagram.com/andijuneart/" class="social-icons" target="_blank">
-            <i class="fab fa-instagram fa-lg ml-3 mr-3 fa-2x" style="color:#F29F05"> </i>
+            <i class="fab fa-instagram fa-lg ml-3 mr-3 fa-2x" style="color:#F2A35E"> </i>
           </a>
           
          <a href="https://www.facebook.com/andijuneart" class="social-icons" target="_blank">
-            <i class="fab fa-facebook-f fa-lg ml-3 mr-3 fa-2x" style="color:#F29F05"> </i>
+            <i class="fab fa-facebook-f fa-lg ml-3 mr-3 fa-2x" style="color:#F2A35E"> </i>
           </a>
         </div>
        </div>
@@ -195,7 +198,7 @@
 			
 		    <div class="infografia row justify-content-center py-4 my-4">
 				<div class="row justify-content-center mb-3">
-		         <a href="#Educacion" data-toggle="collapse"><h3>EDUCACIÓN <img src="img/ico/experiencia.ico" alt="ico" style="height:6rem; width:auto;"></h3></a>
+		         <a href="#Educacion" data-toggle="collapse"><h3> <img src="img/ico/experiencia.ico" alt="ico" style="height:4rem; width:auto; margin-right: 1rem;">EDUCACIÓN <i class="fas fa-chevron-down "></i></h3></a>
 				</div>
 				<div id="Educacion"   class="row justify-content-center collapse">
 				<div class="col-lg-3 col-sm-12">
@@ -205,14 +208,14 @@
 				<div class="col-lg-3 col-sm-12 p-4">
 					<div class="row my-3">
 						<div class="col-6 ">
-						<img src="img/infografia/uglogo.png" alt="UG" title="Universidad de Guanajuato" class=" img-fluid mx-auto d-block" >
+						<img src="img/infografia/uglogo.png" alt="UG" title="Universidad de Guanajuato" class="img-fluid mx-auto d-block" >
 						</div>
 						<div class="col-6 my-auto ">
 							<div class="row justify-content-center">
 						    <pn>2017-2022</pn>
 							</div>
 							<div class="row justify-content-center">
-							<pn style="font-size: 1.2rem">Universidad de Guanajuato</pn>
+							<pn >Universidad de Guanajuato</pn>
 							<p>Lic.Artes Digitales</p>
 						</div>
 							</div>
@@ -227,7 +230,7 @@
 						    <pn>2018-2019</pn>
 							</div>	
 							<div class="row justify-content-center">
-							<pn style="font-size: 1.2rem">Vancouver Institute of Media Arts</pn>
+							<pn >Vancouver Institute of Media Arts</pn>
 							<p>Animación 3D</p>
 						</div>
 							</div>
@@ -280,7 +283,7 @@
 		    <div class="infografia row justify-content-center py-4 my-4">
 		                       
 				<div class="row justify-content-center mb-3">
-			 <a href="#Experiencia" data-toggle="collapse"><h3>EXPERIENCIA <i class="fas fa-chevron-down "></i></h3></a>
+			 <a href="#Experiencia" data-toggle="collapse"><h3><img src="img/ico/experiencia.ico" alt="ico" style="height:4rem; width:auto; margin-right: 1rem;">EXPERIENCIA <i class="fas fa-chevron-down "></i></h3></a>
 			</div>
 				<div id="Experiencia" class="row justify-content-center collapse">
 				 <!-- EXperiencia COLUMNA -->
@@ -384,6 +387,12 @@
 <!-- Footer -->
 		</main>
  <script src="js/codigoanim.js"></script>
+		
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 </body>
 </html>
 
