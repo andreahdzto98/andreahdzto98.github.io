@@ -54,7 +54,7 @@
     <section class="container-fluid  position-relative col-lg-12 col-sm-12 p-0">
         <div>
             <!-- Con video responsivo -->
-			<video loop  autoplay controlsList="nodownload nofullscreen noremoteplayback"  title="Demo Animacion Presentacion" class="vw-100 h-auto">  
+			<video loop  autoplay controlsList="nodownload nofullscreen noremoteplayback"  title="Demo Animacion Presentacion" class="vw-100 h-auto" id="introvideo">  
 			  <source src="video/demo.webm" type="video/webm" />
 			  <span>OH NOES - you don't support html5 video!</span>
 			</video>
@@ -69,7 +69,7 @@
         <div class="row position-absolute vw-100" style="top:40%; z-index: 3">
                     <div class="col-lg-12 col-sm-12 d-flex flex-wrap align-content-center ">
 				<div class="mx-auto p-4 videodemo ">
-					<h1>ANDREA HDZ TO</h1>
+					<h1>ANDREA HERNANDEZ</h1>
 					<p style="color: whitesmoke">Animadora 3D</p>
                     <!-- Estructura de contenido -->
 				</div>
@@ -398,7 +398,7 @@
                                     <h2>Dana y David</h2>
                                   
 									<div class="row justify-content-center">
-                                    <video width="90%" height="90%" controls>
+                                    <video width="90%" height="90%" controls id="dana">
                                    <source src="video/anim/DIALOGUEDANA.mp4" title="Dana y David" type="video/mp4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                                     Your browser does not support the video tag.
                                    </video>
@@ -854,7 +854,8 @@
                                     <iframe src="https://player.vimeo.com/video/489356692"  width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 								  </div>
 									
-                                   <div class="row justify-content-center">
+                                   <div class="row justify-content-center py-3">
+									   
                                     <ul class="list-inline my-2">													
 	                                    <li><img src="img/ico/Procreate.png" alt="ico" class="mx-2 my-auto"  style="width:10%;" ><pn>Software:</pn> Procreate</li>
                                        <li> <img src="img/ico/Calendario.ico" alt="ico" class="mx-2 my-auto"  style="width:10%;"><pn>Fecha:</pn> Octubre 2019</li>
@@ -885,7 +886,21 @@
                                     <iframe width="660" height="415" src="https://www.youtube.com/embed/5e0Q69iwP-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								  </div>
 									
-                                   <div class="row justify-content-center">
+                                   <div class="row justify-content-center my-4">
+									  <img src="img/ico/Games.ico" alt="ico" class="mx-2 mb-3"  style="width:15%;" >
+									     <p>To the Stars es un juego aventura 3D en tercera persona, donde juegas como una estrella caida y viajas a un castillo en el cielo, devuelta a los cielos en donde perteneces</p>
+									   <ul class="list-inline my-2">	
+										   <li class="py-3"><pn> Creditos/Equipo </pn></li>
+										   
+										   <li> Regina V.Esteva: Producción, Level Art, Iluminación y Game Design </li>
+										   <li> Sai Nikhita Redy: Tech y Rigging </li>
+										   <li> Miriam Karina Melgoza: Arte 2D,UI y Game Design</li>
+										   <li> Jenny (Beichen) Guo: Arte de personajes, Arte 2D Y Arte conceptual</li>
+										   <li> Caro Bernárdez- Narrativa, Game Design y RP</li>
+										   <li> Pooja Balamurali: Environment Art</li>
+										   <li> Victoria Celis: Props</li>
+										   <li> Andrea Hernández Torres: Animación</li>
+									   </ul>
                                     <ul class="list-inline my-2">													
 	                                   <li><img src="img/ico/autodesk-maya.png" alt="ico" class="mx-2 my-auto"  style="width:10%;" ><pn>Software:</pn> Maya 2019 y Unreal Engine</li> 
                                        <li> <img src="img/ico/Calendario.ico" alt="ico" class="mx-2 my-auto"  style="width:10%;"><pn>Fecha:</pn> Agosto 2020</li>
@@ -919,5 +934,51 @@
          document.getElementById("pausab").addEventListener("click",function(){
            video.pause();
            });
+		</script>
+	
+	<script>
+		let options ={
+			root: null,
+			rootMargin:'0px',
+			threshold:1.0
+		};
+		let callback = (entires, observer)=>{
+			entires.forEach(entry =>{
+				if(entry.target.id == 'dana')
+			{
+				if(entry.isIntersecting){
+					entry.target.play();
+				}
+				else{
+					entry.target.pause();
+				}
+			   }
+			});
+		}
+	let observer = new IntersectionObserver(callback, options);
+		observer.observe(document.querySelector('#dana'));
+	     document.querySelector('#dana').autoplay = true;
+	
+	</script>
+	
+	<!-- PAUSA PARA VIDEO DEMO-->
+	<script>
+	function playVisibleVideos() {
+  document.querySelectorAll('#introvideo').forEach(video => elementIsVisible(video) ? video.play() : video.pause());
+}
+
+function elementIsVisible(el) {
+  let rect = el.getBoundingClientRect();
+  return (rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth));
+}
+
+let playVisibleVideosTimeout;
+window.addEventListener("scroll", () => {
+  clearTimeout(playVisibleVideosTimeout);
+  playVisibleVideosTimeout = setTimeout(playVisibleVideos, 100);
+});
+
+window.addEventListener("resize", playVisibleVideos);
+window.addEventListener("DOMContentLoaded", playVisibleVideos);
 		</script>
 </html>
