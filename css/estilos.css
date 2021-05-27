@@ -291,7 +291,7 @@ background-color: black;
 
 .videodemo {
 	color: whitesmoke;
-background: linear-gradient(0deg, rgba(240,135,137,.5) 0%, rgba(216,85,88,.5) 100%);
+background: linear-gradient(0deg, rgba(240,135,137,.53) 0%, rgba(216,85,88,.53) 100%);
 	padding: 0.8rem;
 	text-align: center;
 	border-radius: 10px;
