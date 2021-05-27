@@ -99,9 +99,6 @@ color:#0F0F0F;
   opacity: 1;
 }
 
-.resume-movil{
-		display: none;
-	}
 
 /*NEXT BUTTONS*/
 
@@ -226,13 +223,7 @@ height: auto;
 		width: 115%;
 	}
 
-	.resume-movil{
-		display: block;
-		font-size: 0.9rem;
-	    text-align: center;
-	   margin-top: 8px;
-	margin-bottom: 0px;
-	}
+	
 }
 
 
