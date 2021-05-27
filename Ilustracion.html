@@ -630,7 +630,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 style="color:#D85558">#DTIYS Charringo</h2>
                                  
-                                   <video width="60%" height="60%" controls id="charringovid">
+                                   <video width="60%" height="60%" controls >
                                    <source src="video/proceso/Charringo_proceso.mp4"  title="Charringo" type="video/mp4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                                     Your browser does not support the video tag.
                                    </video>
@@ -648,13 +648,13 @@
     		 <div class="portfolio-modal modal fade " id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" >
                 <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal" id="pausa2" ><i class="fas fa-times fa-3x" color="#D85558"></i></div>
+                <div class="close-modal" data-dismiss="modal" ><i class="fas fa-times fa-3x" color="#D85558"></i></div>
                     <div class="container">
                                 
                                     <!-- Project Details Go Here-->
                                     <h2 style="color:#D85558">Alien</h2>
                                  
-                                   <video width="60%" height="60%" controls id="alienvid">
+                                   <video width="60%" height="60%" controls >
                                    <source src="video/proceso/Alien_video.mp4" title="Alien" type="video/mp4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                                     Your browser does not support the video tag.
                                    </video>
@@ -692,7 +692,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 style="color:#D85558">#DTIYS ArtByElliee</h2>
                                  
-                                   <video width="60%" height="60%" controls id="videoilu">
+                                   <video width="60%" height="60%" controls >
                                    <source src="video/proceso/louise_vid.mp4" title="Elliee" type="video/mp4" frameborder="0" allow="autoplay; fullscreen" allowscriptaccess="always" allowfullscreen>
                                     Your browser does not support the video tag.
                                    </video>
@@ -711,7 +711,7 @@
                                     <!-- Project Details Go Here-->
                                     <h2 style="color:#D85558">Navidad</h2>
                                  
-                                   <video width="60%" height="60%" controls id="videoilu" >
+                                   <video width="60%" height="60%" controls  >
                                    <source src="video/proceso/navidad_vid.mp4" title="Navidad" type="video/mp4" frameborder="0" allow="autoplay; fullscreen"  allowscriptaccess="always" allowfullscreen>
                                     Your browser does not support the video tag.
                                    </video>
@@ -724,13 +724,13 @@
 				 <div class="portfolio-modal modal fade " id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal" id="pausaf"><i class="fas fa-times fa-3x" color="#D85558"></i></div>
+                <div class="close-modal" data-dismiss="modal" ><i class="fas fa-times fa-3x" color="#D85558"></i></div>
                     <div class="container">
                           
                                     <!-- Project Details Go Here-->
                                     <h2 style="color:#D85558">Cuco</h2>
                                  
-                                   <video width="60%" height="60%" controls id="videoilu">
+                                   <video width="60%" height="60%" controls i>
                                    <source src="video/proceso/cuco_vid.mp4" title="Cuco" type="video/mp4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                                     Your browser does not support the video tag.
                                    </video>
@@ -743,13 +743,13 @@
 			 <div class="portfolio-modal modal fade " id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal" id="pausag"><i class="fas fa-times fa-3x" color="#D85558"></i></div>
+                <div class="close-modal" data-dismiss="modal" ><i class="fas fa-times fa-3x" color="#D85558"></i></div>
                     <div class="container">
                                
                                     <!-- Project Details Go Here-->
                                     <h2 style="color:#D85558">Minecraft Girl</h2>
                                  
-                                   <video width="60%" height="60%" controls id="videoilu">
+                                   <video width="60%" height="60%" controls >
                                    <source src="video/proceso/minecraft_vid.mp4" title="Minecraft Girl" type="video/mp4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                                     Your browser does not support the video tag.
                                    </video>
@@ -865,40 +865,20 @@
 		
 		</script>
 		
-		<script src="js/codigoanim.js"></script>
-
-							 	<script>
-		let options ={
-			root: null,
-			rootMargin:'0px',
-			threshold:1.0
-		};
-		let callback = (entires, observer)=>{
-			entires.forEach(entry =>{
-				if(entry.target.id == 'charringovid')
-			{
-				if(entry.isIntersecting){
-					entry.target.play();
-				}
-				else{
-					entry.target.pause();
-				}
-			   }
-			});
-		}
-	let observer = new IntersectionObserver(callback, options);
-		observer.observe(document.querySelector('#charringovid'));
-	
-	
-	</script>	
-
-<script>$('#portfolioModal3').on('hidden.bs.modal', function(e) {
-  var $videos = $(e.target).find('video');
-  $videos.each(function(index, video){
-  $(videos).attr('src', $(video).attr('src'));
-  });
+		<script>
+	const observer = new IntersectionObserver(entries => { 
+    entries.forEach(entry => {
+       entry.intersectionRatio > 0 ? entry.target.play() : entry.target.pause()
+    })
 })
-		</script>
+
+const videos = document.querySelectorAll('video')   
+videos.forEach(video => {
+    console.log('video out')
+    observer.observe(video)
+})
+	
+	</script>
 		
 		
 	

@@ -655,6 +655,7 @@ background-color: rgba(247,240,240,0.70);
  font-family: 'Mulish', sans-serif;
 font-size: 1.5rem;
 font-weight: 600;
+	color: #000000;
 }
 .portfolio-modal .modal-content li {
  font-family: 'Mulish', sans-serif;
@@ -669,8 +670,8 @@ font-weight: 400;
 .portfolio-modal .modal-content a {
  font-family: 'Mulish', sans-serif;
 font-size: 1.5rem;
-font-weight: 400;
-color: #131313;
+font-weight: 500;
+color: #313131;
 }
 .portfolio-modal .modal-content a:hover {
 
