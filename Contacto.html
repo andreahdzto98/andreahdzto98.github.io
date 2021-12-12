@@ -55,7 +55,7 @@
         <div class="align-content-end"  align-self="flex-end">
 		<nav class="navbar navbar-expand-md align-content-end"> 
 
-          <a class="navbar-brand m-1  d-flex justify-content-end" href="index.html"><img src="img/ico/LOGO.svg" alt="ico" width="40%" height="auto" ></a> 
+          <a class="navbar-brand m-1  d-flex justify-content-end" href="index.html"><img src="img/ico/logoico.ico" alt="ico" width="40%" height="auto" ></a> 
 			<ul class="navbar-nav">
            <li class="nav-item"> 
 
@@ -95,7 +95,11 @@
 				   <li class="nav-item active">
           <a class="nav-link " style="color:#F2A35E " href="Contacto.html">Contacto<span class="sr-only">(current)</span></a>
         </li>
-				
+				 <li class="nav-item"> 
+
+                <a class="nav-link" href="Blog.html">Blog</a> 
+
+              </li> 
 
             </ul> 
 
@@ -207,6 +211,12 @@
 
     </div>
 
+	<div class="row justify-content-start mt-5 pt-4 pb-0 mb-0">
+		<div class="containermap col-md-12 col-xs-6 d-flex justify-content-center mb-0 pb-0">
+		
+<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.241295968826!2d-101.70876378466617!3d21.182571387884526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bb8a080977a1d%3A0xd99eed36aca4b74a!2sJdn.%20Albano%20110%2C%20Gran%20Jardin%2C%2037138%20Le%C3%B3n%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1639278325020!5m2!1ses-419!2smx" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+	</div>
 </section>
 <!--Section: Contact v.2-->
 </div>
@@ -254,6 +264,16 @@
 	</main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
 
+		
 </body>
 </html>
